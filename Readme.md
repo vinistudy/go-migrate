@@ -17,6 +17,7 @@
 |--|--|--|
 |make|无|命令提示，相当于 help|
 |make up|无|创建镜像，生成容器。第一次生成镜像会久一点，后边会好一些|
+|make ps|无|查看容器|
 |make down|无|删除容器|
 |make laravel|无|创建一个最新版本的 laravel 项目|
 |make model|MODEL|创建模型和迁移。这里有一个参数 MODEL。模型一般用单数，且首字母大写，比如 User。迁移生成的表是复数 users。例子：make model MODEL=User|

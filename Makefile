@@ -7,6 +7,7 @@ all: help
 help: 
 	@echo "支持以下命令"
 	@echo "make up                      # 创建镜像，生成容器"
+	@echo "make ps                      # 查看容器"
 	@echo "make down                    # 删除容器"
 	@echo "make laravel                 # 创建一个 laravel 项目"
 	@echo "make model MODEL=xxx         # 创建一个模型和迁移"
@@ -15,6 +16,9 @@ help:
 up:
 	@docker-compose up -d
 	@chmod 777 ./logs/redis
+
+ps:
+	@docker-compose ps
 
 down:
 	@docker-compose down
