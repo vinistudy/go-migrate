@@ -12,7 +12,7 @@ RUN pecl install redis && docker-php-ext-enable redis
 
 # 安装 composer，并设置镜像
 RUN curl -o /usr/bin/composer https://mirrors.aliyun.com/composer/composer.phar \ 
-    chmod +x /usr/bin/composer \
-    composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+    && chmod +x /usr/bin/composer \
+    && composer config -g repo.packagist composer https://mirrors.aliyun.com/composer
 
 WORKDIR /www
