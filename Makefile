@@ -52,7 +52,7 @@ table:
 ifdef TABLE
 	@con=$$(docker ps -qf "name=mg-php8.3"); \
 	if [ -n "$$con" ]; then \
-		docker exec -i $$con bash -c "cd /www/www.php.com && php artisan make:migration --create=$(TABLE)"; \
+		docker exec -i $$con bash -c "cd /www/www.php.com && php artisan make:migration create_$(TABLE)_table --create=$(TABLE)"; \
 	else \
 		echo "没找到 php 容器"; \
 	fi
